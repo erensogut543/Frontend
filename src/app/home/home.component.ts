@@ -1,7 +1,7 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {getHtmlTagDefinition} from "@angular/compiler";
 import {DataService} from "../dataService";
-import {Users} from "../../../ClassifiedsProject/src/app/users.model";
+// import {Users} from "../../ClassifiedsProject/src/app/users.model";
 
 @Component({
   selector: 'app-home',

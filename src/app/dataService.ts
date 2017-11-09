@@ -14,7 +14,7 @@ export class DataService {
   }
 
   public getUserWithId() {
-    return this.http.get('http://localhost:58632/api/Users/1026')
+    return this.http.get('http://localhost:65041/api/Users/1001')
       .map((response: Response) => response.json());
   }
 
@@ -22,7 +22,7 @@ export class DataService {
     // let headers = new Headers();
     // headers.append('Content-Type', 'application/json');
     // let myJson = JSON.stringify(users);
-    return this.http.post('http://localhost:58632/api/Users',users
+    return this.http.post('http://localhost:65041/api/Users', users
       // {headers: headers}
       )
       // .map(res =>  res.json())

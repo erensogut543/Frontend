@@ -3,7 +3,7 @@ import {
 } from '@angular/core';
 import {Subscription} from "rxjs/Subscription";
 import 'rxjs/Rx';
-import {Notes} from "../../notes.model";
+import {Notes} from '../../notes.model';
 import {NotesService} from "../../notes.service";
 
 declare var jquery:any;
