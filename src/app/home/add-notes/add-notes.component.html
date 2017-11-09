@@ -1,0 +1,64 @@
+<div class="col-xs-6 pull left">
+  <form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+    <div formGroupName="noteData">
+      <div class="form-group">
+        <label for="file">Notları Ekle</label>
+        <input id="file" formControlName="file" type="file" [(ngModel)] = "notlar">
+      </div>
+      <div class="form-group">
+        <label for="header">Ders</label>
+        <input id="header" formControlName="subject" type="text" class="form-control" style="width: 400px" [(ngModel)] = "konu">
+      </div>
+      <div class="form-group">
+        <label for="ekle">Açıklama</label>
+        <textarea
+          type="text"
+          class="form-control"
+          id="ekle" rows="5"
+          formControlName="description"
+          style="width: 400px"
+          [(ngModel)] = "aciklama">
+        </textarea>
+        <br>
+        <div class="form-group">
+          <label for="bolum">Bölüm</label>
+          <select
+            name="bolum"
+            id="bolum"
+            class="form-control"
+            style="width: 400px; height: 35px"
+            formControlName="department"
+            [(ngModel)] = "bolum">
+            <option value="Elektronik ve Haberleşme Mühendisliği">Elektronik ve Haberleşme Mühendisliği</option>
+            <option value="Bilgisayar Mühendisliği">Bilgisayar Mühendisliği</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success btn-lg" id="eklebutton" style="outline: none">Ekle</button>
+        <button class="btn btn-primary btn-lg" (click)="onClear()" type="reset" style="outline: none" >Temizle</button>
+        <button class="btn btn-danger btn-lg" (click)="onCancel()" type="button" style="outline: none" >İptal</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="col-xs-6 pull right">
+  <h3>İlanınız Bu Şekilde Görünecek</h3>
+  <!--<ul class="list-group" >-->
+    <!--<br>-->
+    <!--<li  class="list-group-item" ><b>Resim:</b> {{ notlar }}</li>-->
+    <!--<li  class="list-group-item"><b>Ders:</b> {{ konu }}</li>-->
+    <!--<li  class="list-group-item" style= "text-after-overflow: 0;"><b>Açıklama:</b> {{ aciklama }} </li>-->
+    <!--<li  class="list-group-item"><b>Bölüm:</b> {{ bolum }} </li>-->
+  <!--</ul>-->
+  <a   class="list-group-item clearfix">
+    <div class="pull-left">
+      <h4 class="list-group-item-heading"><b>Ders:</b> {{ konu }}</h4>
+      <br>
+      <p class="list-group-item-text"><b>Açıklama:</b> {{ aciklama }}</p>
+      <br>
+      <p class="list-group-item-number"><b>Bölüm:</b> {{ bolum }} </p>
+    </div>
+  </a>
+
+</div>

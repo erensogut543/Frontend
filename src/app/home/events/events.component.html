@@ -1,0 +1,21 @@
+<!--<ul class="list-group" *ngFor="let events of event" >-->
+  <!--<br>-->
+  <!--<li  class="list-group-item"> File:{{ events.file }}</li>-->
+  <!--<li  class="list-group-item"> Etkinlik Adı:{{ events.header }}</li>-->
+  <!--<li  class="list-group-item"> Açıklama:{{ events.description }}</li>-->
+  <!--<li  class="list-group-item"> Tarih:{{ events.date }}</li>-->
+<!--</ul>-->
+
+
+<div class="col-xs-4 pull left" >
+  <div class="row"  *ngFor="let events of event">
+    <a   class="list-group-item clearfix">
+      <div class="pull-left" >
+        <h4 class="list-group-item-heading">{{ events.header }}</h4>
+        <p class="list-group-item-text">{{ events.description }}</p>
+        <p class="list-group-item-number">{{ events.date }}</p>
+      </div>
+    </a>
+    <br>
+  </div>
+</div>

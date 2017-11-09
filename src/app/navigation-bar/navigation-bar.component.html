@@ -1,0 +1,144 @@
+<div id="background" >
+  <div class="container">
+    <h1>Lorem Ipsum Dolor</h1>
+    <p style="color: white; font-size: 20pt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+      sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  </div>
+  <div>
+    <div class="panel-group" *ngIf="panelVisibleKayitOl" id="kayitol">
+      <div class="panel panel-default">
+        <div class="panel-heading"><b>Kayıt Ol</b></div>
+        <div class="panel-body">
+          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" >
+            <div formGroupName="userData">
+              <div class="form-group">
+                <label for="kulAdi">UserName</label>
+                <input
+                  type="text"
+                  id="kulAdi"
+                  formControlName="Username"
+                  class="form-control input-lg">
+                <span
+                  *ngIf="!signupForm.get('userData.Username').valid && signupForm.get('userData.Username').touched"
+                  class="help-block" style="color:red"><b>Lütfen sonu @dogus.edu.tr olan bir mail adresi giriniz</b></span>
+              </div>
+              <p *ngIf="val.valid">lütfen</p>
+              <div class="form-group">
+                <label for="name">Ad</label>
+                <input
+                  type="text"
+                  id="name"
+                  formControlName="Name"
+                  class="form-control input-lg">
+              </div>
+              <div class="form-group">
+                <label for="surname">Soyad</label>
+                <input
+                  type="text"
+                  id="surname"
+                  formControlName="Surname"
+                  class="form-control input-lg">
+              </div>
+
+              <!--<div class="form-group">-->
+                <!--<label for="username">Kullanıcı Adı</label>-->
+                <!--<input-->
+                  <!--type="text"-->
+                  <!--id="username"-->
+                  <!--formControlName="Username"-->
+                  <!--class="form-control input-lg">-->
+              <!--</div>-->
+              <div class="form-group">
+                <label for="password">Parola</label>
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control input-lg"
+                  formControlName="Password">
+                <span
+                  *ngIf="!signupForm.get('userData.Password').valid && signupForm.get('userData.Password').touched"
+                  class="help-block" style="color:red"><b>En az 6 karakter</b></span>
+              </div>
+              <div class="form-group">
+                <label for="confirmpassword">Parolayı Onayla</label>
+                <input
+                  type="password"
+                  id="confirmpassword"
+                  class="form-control input-lg"
+                  formControlName="confirmpassword">
+              </div>
+              <div>
+                <button
+                  class="btn btn-primary btn-lg"
+                  type="submit"
+                  style="left: 50%; outline: none;"
+                >Kayıt Ol
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="panel-group"  id="girisyap">
+      <div class="panel panel-defaul">
+        <div class="panel-heading"><b>Giriş Yap</b></div>
+        <div class="panel-body" style="  min-height:275px;">
+          <form [formGroup]="signinForm" (ngSubmit)="onSubmitt()">
+            <div formGroupName="userData">
+              <div class="form-group">
+                <label for="emaill">Mail</label>
+                <input
+                  type="text"
+                  id="emaill"
+                  class="form-control input-lg"
+                  formControlName="emaill">
+                <span
+                  *ngIf="!signinForm.get('userData.emaill').valid && signinForm.get('userData.emaill').touched"
+                  class="help-block">Lütfen sonu @dogus.edu.tr olan bir mail adresi giriniz</span>
+              </div>
+              <div class="form-group">
+                <label for="passwordd">Parola</label>
+                <input
+                  type="password"
+                  id="passwordd"
+                  class="form-control input-lg"
+                  formControlName="passwordd">
+              </div>
+              <br>
+              <div>
+                <button
+                  class="btn btn-success btn-lg"
+                  type="submit"
+                  style="outline: none">Giriş Yap
+                </button> veya
+                <button
+                  class="btn btn-primary btn-lg"
+                  type="button"
+                  style="outline: none; margin-left: 5px"
+                  (click)="onSignup()"
+                >Kayıt Ol
+                </button>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<form>
+<button class="btn btn-primary" (click)="ekle()">e</button>
+<ul *ngIf="dogrumu">
+  <li>
+    <span>{{values | json}} </span>
+    <span *ngFor="let x of newUser">{{ x | json}} </span>
+  </li>
+</ul>
+</form>
+
+
+
+
+

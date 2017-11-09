@@ -1,0 +1,21 @@
+<!--<ul class="list-group" *ngFor="let notes of note" >-->
+  <!--<br>-->
+  <!--<li  class="list-group-item"> Ders:{{ notes.subject }}</li>-->
+  <!--<li  class="list-group-item"> Açıklama:{{ notes.description }}</li>-->
+  <!--<li  class="list-group-item"> Bölüm:{{ notes.department }}</li>-->
+  <!--<li  class="list-group-item"> File:{{ notes.file }}</li>-->
+<!--</ul>-->
+
+
+<div class="col-xs-4 pull left" >
+  <div class="row"  *ngFor="let notes of note">
+    <a   class="list-group-item clearfix">
+      <div class="pull-left" >
+        <h4 class="list-group-item-heading">{{ notes.subject }}</h4>
+        <p class="list-group-item-text">{{ notes.description }}</p>
+        <p class="list-group-item-number">{{ notes.department }}</p>
+      </div>
+    </a>
+    <br>
+  </div>
+</div>

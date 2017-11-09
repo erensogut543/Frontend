@@ -1,0 +1,72 @@
+  <div class="col-xs-6 pull left">
+    <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()" >
+      <div formGroupName="uploadData">
+      <div class="form-group">
+        <label for="file">Ürün Görseli</label>
+        <div class="form-group">
+          <label for="file">Satış Ekle</label>
+          <input id="file" formControlName="file" type="file" #UserImage>
+        </div>
+      <div class="form-group">
+        <label for="header">İlan Başlığı</label>
+        <input
+          id="header"
+          formControlName="header"
+          type="text"
+          class="form-control"
+          style="width: 400px"
+          [(ngModel)]="baslik">
+      </div>
+      <div class="form-group">
+        <label for="ekle">Açıklama</label>
+        <textarea
+          type="text"
+          class="form-control"
+          id="ekle" rows="5"
+          formControlName="description"
+          style="width: 400px"
+          [(ngModel)] = "aciklama">
+        </textarea>
+        <p>{{answer}}</p>
+        <br>
+      </div>
+      <div class="form-group">
+        <label for="price">Fiyat(TL)</label>
+        <input
+          type="number"
+          value="TL"
+          id="price"
+          class="form-control"
+          style="width: 80px"
+          formControlName="price"
+          [(ngModel)]="fiyat">
+      </div>
+        <div class="form-group">
+        <button type="submit" class="btn btn-success btn-lg" style="outline: none" >Ekle</button>
+          <button class="btn btn-primary btn-lg" (click)="onClear()" type="reset" style="outline: none" >Temizle</button>
+          <button class="btn btn-danger btn-lg" (click)="onCancel()" type="button" style="outline: none">İptal</button>
+      </div>
+    </div>
+      </div>
+    </form>
+
+  </div>
+  <div class="col-xs-6 pull right">
+    <h3>İlanınız Bu Şekilde Görünecek</h3>
+    <!--<ul class="list-group" >-->
+      <!--<br>-->
+      <!--<li  class="list-group-item"><b>Başlık:</b> {{ baslik }}</li>-->
+      <!--<li  class="list-group-item"><b>Açıklama:</b> {{ aciklama }}</li>-->
+      <!--<li  class="list-group-item"><b>Fiyat:</b> {{ fiyat }} TL</li>-->
+      <!--<li  class="list-group-item"><b>Resim:</b> {{ resim }} </li>-->
+    <!--</ul>-->
+    <a   class="list-group-item clearfix" style="overflow: hidden " >
+      <div class="pull-left">
+        <h4 class="list-group-item-heading"><b>Başlık:</b> {{ baslik }}</h4>
+        <br>
+        <p class="list-group-item-text"><b>Açıklama:</b> {{ aciklama }}</p>
+        <br>
+        <p class="list-group-item-number"><b>Fiyat:</b> {{ fiyat }} TL</p>
+      </div>
+    </a>
+  </div>

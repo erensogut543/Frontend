@@ -1,0 +1,38 @@
+
+<!--<ul class="list-group" *ngFor="let sales of sale" >-->
+  <!--<br>-->
+  <!--<li  class="list-group-item"> Başlık:{{ sales.header }}</li>-->
+  <!--<li  class="list-group-item"> Açıklama:{{ sales.description }}</li>-->
+  <!--<li  class="list-group-item"> Fiyat:{{ sales.price }}</li>-->
+  <!--<li  class="list-group-item"> File:{{ sales.file }}</li>-->
+
+
+<!--</ul>-->
+<!--*****************************************************************************-->
+
+<!--<div class="container">-->
+<!--<div class="col-xs-6">-->
+  <!--<div class="row">-->
+    <!--<ul class="list-group" *ngFor="let sales of sale">-->
+      <!--<li  class="list-group-item"> Başlık:{{ sales.header }}</li>-->
+      <!--<li  class="list-group-item"> Açıklama:{{ sales.description }}</li>-->
+      <!--<li  class="list-group-item"> Fiyat:{{ sales.price }} TL</li>-->
+      <!--<li  class="list-group-item"> File:{{ sales.UserImage | json }}</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<div class="col-xs-4 pull left" >
+  <div class="row"  *ngFor="let sales of sale">
+    <a   class="list-group-item clearfix">
+      <div class="pull-left" >
+        <h4 class="list-group-item-heading">{{ sales.header }}</h4>
+        <p class="list-group-item-text">{{ sales.description }}</p>
+        <p class="list-group-item-number">{{ sales.price }}</p>
+      </div>
+    </a>
+    <br>
+  </div>
+</div>
+

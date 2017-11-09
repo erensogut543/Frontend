@@ -1,0 +1,48 @@
+#left-panel-link {
+  position: absolute;
+  top: 30%;
+  right: 55%;
+}
+#right-panel-link {
+  position: absolute;
+  top: 30%;
+  left: 55%;
+}
+/*.fatih {*/
+  /*background-image: url(https://wallpaperscraft.com/image/forest_lake_reflection_island_mist_97668_1920x1080.jpg) ;*/
+/*}*/
+/*body {*/
+  /*margin-top:-20px;*/
+  /*margin-left: -300px;*/
+  /*margin-right: -117px;*/
+/*}*/
+#background{
+  background-image: url("http://www.macleans.ca/wp-content/uploads/2014/03/MAC14_TEXTBOOKS_POST01.jpg");
+  padding-bottom: 610px;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  margin-top:-20px;
+  margin-left: -300px;
+  margin-right: -117px;
+}
+#girisyap {
+  position: absolute;
+  width: 300px;
+  opacity: 0.9;
+  margin-left: 450px;
+  margin-top: 45px ;
+}
+#kayitol {
+  position: absolute;
+  width: 300px;
+  opacity: 0.9;
+  margin-left: 800px;
+  margin-top: 45px ;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+
+}
+
+
+

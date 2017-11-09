@@ -1,0 +1,137 @@
+<!--*ngIf="nav.visible"-->
+
+<!--<nav  class="navbar navbar-lg">-->
+  <div class="container-fluid hidden-xs">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="icon-bar">
+      <a role="button" style="width: 5%">
+        <span style="font-size:30px;cursor:pointer" (click)="sideBarToggle()">&#9776;</span>
+      </a>
+      <a routerLink="openning" routerLinkActive="active" style="width: 12%"><i class="fa fa-home"></i></a>
+      <a routerLink="sales"  routerLinkActive="active"><b>Satış</b></a>
+      <a routerLink="events" routerLinkActive="active"><b>Etkinlikler</b></a>
+      <a routerLink="notes" routerLinkActive="active" ><b>Notlar</b></a>
+      <a class="pull-right" id="kullanici"
+         style="cursor: pointer"
+         (click)="onUser($event)"
+          >Kullanıcı<span class="caret"></span></a>
+    </div>
+  </div>
+<div class="panel-group" id="kullaniciPaneli" *ngIf="userMenu">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <ul class="panel-menu" style="margin-right:50px">
+        <li><a style="cursor: pointer;
+          color: black;
+          background-color: white;
+          font-size: 22px;
+          text-align: center;"
+          routerLink="/home/sales">İlanlarım</a></li>
+        <li><a style="cursor: pointer;color: black;
+          background-color: white;
+          font-size: 22px;
+          text-align: right;">Parolamı Değiştir</a></li>
+        <li><a style="cursor: pointer;color: black;
+          background-color: white;
+          font-size: 22px;
+          text-align: right;">Oturumu Kapat</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <!--<ul class="navbar navbar-right">-->
+      <!--<li class="dropdown" appDropdown >-->
+        <!--<a  style="cursor: pointer; margin-right: 1px" class="dropdown-toggle pull-right" role="button">Kullanıcı<span class="caret"></span></a>-->
+        <!--<ul class="dropdown-menu" style="margin-right:50px">-->
+          <!--<li><a style="cursor: pointer;-->
+          <!--color: black;-->
+          <!--background-color: white;-->
+          <!--font-size: 22px;-->
+          <!--text-align: center;">İlanlarım</a></li>-->
+          <!--<li><a style="cursor: pointer;color: black;-->
+          <!--background-color: white;-->
+          <!--font-size: 22px;-->
+          <!--text-align: right;">Parolamı Değiştir</a></li>-->
+          <!--<li><a style="cursor: pointer;color: black;-->
+          <!--background-color: white;-->
+          <!--font-size: 22px;-->
+          <!--text-align: right;">Oturumu Kapat</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+    <!--</ul>-->
+
+
+<!--</nav>-->
+<div class="container">
+  <div class="col-xs-12">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<!--*ngIf="sidebar.visible"-->
+<div class="sidenav"
+     style="background-color: hsl(0, 0%, 94%)"
+     id="sideNav"
+     *ngIf="!sideMenu">
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <hr style="color: black; font-size: large">
+  <br>
+
+  <!--<a routerLink="addSales" routerLinkActive="active">Satış Yap</a>-->
+  <!--<a routerLink="addEvent" routerLinkActive="active">Etkinlik Paylaş</a>-->
+  <!--<a routerLink="addNotes" routerLinkActive="active">Not Paylaş</a>-->
+
+  <a routerLink="addSales" routerLinkActive="active" >
+    <i class="glyphicon glyphicon-shopping-cart" style="text-align: left" ></i>
+    <span style="text-align: center; margin-left: 12px">Satış Yap</span>
+  </a>
+  <a routerLink="addEvent" routerLinkActive="active"><i class="glyphicon glyphicon-calendar" style="text-align: left"></i>
+    <span style="text-align: center; margin-left: 12px" >Etkinlik Paylaş</span>
+  </a>
+  <a routerLink="addNotes" routerLinkActive="active"><i class="glyphicon glyphicon-list-alt"  style="text-align: left"></i>
+    <span style="text-align: center; margin-left: 14px">Not Paylaş</span>
+  </a>
+</div>
+
+<!--<div>-->
+  <!--<form>-->
+    <!--<label for="number">Kullanıcı id:</label>-->
+    <!--<input type="number" id="number">-->
+    <!--<button class="btn btn-primary" (click)="ekle()">Ekle</button>-->
+  <!--</form>-->
+  <!--<p>{{values}}</p>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+<!--<div class="navbar-header navbar-primary">-->
+<!--<a routerLink="/anasayfa" class="navbar-brand" style="color: white;font-size: 40px">Sosyal Platform</a>-->
+<!--</div>-->
+
+<!--<div class="collapse navbar-collapse">-->
+<!--<ul class="nav navbar-nav">-->
+<!--<li routerLinkActive="active"><a routerLink="/sales" style="font-size: 30px;color:white; margin-top: inherit">Satış</a></li>-->
+<!--<li routerLinkActive="active"><a routerLink="/events" style="font-size: 30px">Etkinlikler</a></li>-->
+<!--<li routerLinkActive="active"><a routerLink="/notes" style="font-size: 30px">Notlar</a></li>-->
+
+
+<!--</ul>-->
+
+<!--</div>-->
+
