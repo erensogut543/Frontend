@@ -3,6 +3,8 @@ import { FormControl, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Sales} from "../../sales.model";
 import {SalesService} from "../../sales.service";
+import {FineUploader, UIOptions} from 'fine-uploader';
+
 
 
 
@@ -14,6 +16,8 @@ import {SalesService} from "../../sales.service";
 })
 export class AddSalesComponent implements OnInit {
   uploadForm: FormGroup;
+  uploader: FineUploader;
+  uiOptions: UIOptions;
   sale: Sales[];
   // resim = {
   //   "filesize": "", /* bytes */
@@ -36,7 +40,17 @@ export class AddSalesComponent implements OnInit {
               private route: ActivatedRoute,) { }
 
   ngOnInit() {
+    this.uiOptions = {
+      element: document.getElementById('fine-uploader-gallery'),
+      template: 'qq-template-gallery',
+      autoUpload: false,
+      debug: true
+    }
 
+    /**
+     * Instantiate the FineUploader and pass in the uiOptions
+     */
+    this.uploader = new FineUploader(this.uiOptions);
     this.initForm();
     // let subscription = this.salesService.saleChanged
     //   .subscribe(

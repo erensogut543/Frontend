@@ -20,9 +20,12 @@
       "prefix": "app",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "styles.css"
+        "styles.css",
+        "../node_modules/fine-uploader/fine-uploader/fine-uploader.min.css",
+        "../node_modules/fine-uploader/fine-uploader/fine-uploader-gallery.min.css",
+        "../node_modules/fine-uploader/fine-uploader/fine-uploader-new.css"
       ],
-      "scripts": [],
+      "scripts": ["../node_modules/fine-uploader/fine-uploader/fine-uploader.min.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
